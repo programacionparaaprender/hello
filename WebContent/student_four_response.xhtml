@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"
 xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 xmlns:h="http://xmlns.jcp.org/jsf/html"
 xmlns:a="http://xmlns.jcp.org/jsf/facelets">
 <h:head>
@@ -12,6 +13,11 @@ xmlns:a="http://xmlns.jcp.org/jsf/facelets">
 	<div class="card-body">
 		<p>The student is confirmed: #{studentTwoBean.firstName} #{studentTwoBean.lastName}</p>
 		<p>The student is favorite language: #{studentTwoBean.language}</p>
+		<ul>
+			<ui:repeat value="#{studentTwoBean.languageFavorites}" var="language">
+	        	<li>#{language}</li>
+	        </ui:repeat>
+		</ul>
 	</div>
 	</div>
 </h:body>
