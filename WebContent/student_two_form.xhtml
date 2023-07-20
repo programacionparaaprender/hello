@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:a="http://xmlns.jcp.org/jsf/facelets"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+xmlns:composite="http://xmlns.jcp.org/jsf/composite">
+<h:head>
+	<title>Student Registration Form</title>
+</h:head>
+<h:body>
+	<h:form>
+		First name: <h:inputText id="firstname" value="#{studentTwoBean.firstName}" a:placeholder="What's your firstname" />
+		<br/><br/>
+		Last name: <h:inputText id="lastname" value="#{studentTwoBean.lastName}" a:placeholder="What's your lastname" />
+		<br/><br/>
+		Country:
+		<!-- <h:selectOneMenu value="#{studentTwoBean.country}">
+		<f:selectItem itemValue="Peru" itemLabel="Perú" />
+		<f:selectItem itemValue="Venezuela" itemLabel="Venezuela" />
+			<f:selectItem itemValue="Brazil" itemLabel="Brazil" />
+			<f:selectItem itemValue="France" itemLabel="France" />
+			<f:selectItem itemValue="Germany" itemLabel="Germany" />
+			<f:selectItem itemValue="India" itemLabel="India" />
+			<f:selectItem itemValue="Turkey" itemLabel="Turkey" />
+			<f:selectItem itemValue="United Kingdom" itemLabel="United Kingdom" />
+			<f:selectItem itemValue="United States" itemLabel="United States" />
+		</h:selectOneMenu> -->
+		<h:selectOneMenu id="country" value="#{studentTwoBean.country}" style="width:150px">
+                <f:selectItem itemLabel="Select Country" itemValue="" noSelectionOption="true" />
+                <f:selectItems value="#{studentTwoBean.countryOptions}" />
+        </h:selectOneMenu>
+		<br/><br/>
+		What's your favorite languague programming: 
+		<h:selectOneRadio value="#{studentTwoBean.language}">
+            <f:selectItems value="#{studentTwoBean.languageOptions}" />
+		</h:selectOneRadio>
+		<br/><br/>
+		<h:commandButton value="Submit" action="student_two_response" />
+	</h:form>
+</h:body>
+</html>

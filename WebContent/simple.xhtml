@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:a="http://xmlns.jcp.org/jsf/facelets"
+xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+xmlns:composite="http://xmlns.jcp.org/jsf/composite">
+<h:head>
+	<title>Simple - Input Form</title>
+</h:head>
+<h:body>
+	<h:form>
+		<!-- http://localhost:8080/hello/faces/hello-world.xhtml -->
+		First name: <h:inputText id="name" value="#{firstName}" a:placeholder="What's your name" />
+		<br/><br/>
+		Last name: <h:inputText id="name" value="#{lastName}" a:placeholder="What's your name" />
+		<br/><br/>
+		<h:commandButton value="Submit" action="myresponse" />
+	</h:form>
+</h:body>
+</html>
