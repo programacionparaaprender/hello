@@ -32,6 +32,7 @@ public class StudentTwoBean implements Serializable {
 	private String country;
 	private List<String> countryOptions;
 	private List<String> languageOptions;
+	private List<String> languageFavorites;
 	public StudentTwoBean() {
 		// TODO Auto-generated constructor stub
 	}
@@ -52,6 +53,7 @@ public class StudentTwoBean implements Serializable {
 		countryOptions.add("Peru");
 		countryOptions.add("Venezuela");
 		
+		languageFavorites = new LinkedList<String>();
 		languageOptions = new LinkedList<String>();
 		languageOptions.add("Python");
 		languageOptions.add("Java");
@@ -111,6 +113,14 @@ public class StudentTwoBean implements Serializable {
 
 	public void setLanguage(String language) {
 		this.language = language;
+	}
+
+	public List<String> getLanguageFavorites() {
+		return languageFavorites;
+	}
+
+	public void setLanguageFavorites(List<String> languageFavorites) {
+		this.languageFavorites = languageFavorites;
 	}
 	
 	
